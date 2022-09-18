@@ -20,14 +20,14 @@ V2P，圈X重写：
 小程序入口：公众号 腾讯自选股微信版->右下角好福利->福利中心
 [task_local]
 #腾讯自选股
-35 11,16 * * * https://raw.githubusercontent.com/leafxcy/JavaScript/main/txstockV2.js, tag=腾讯自选股, enabled=true
+35 11,16 * * * https://raw.githubusercontent.com/leafTheFish/DeathNote/main//txstockV2.js, tag=腾讯自选股, enabled=true
 [rewrite_local]
-https://wzq.tenpay.com/cgi-bin/.*user.*.fcgi url script-request-header https://raw.githubusercontent.com/leafxcy/JavaScript/main/txstockV2.js
+https://wzq.tenpay.com/cgi-bin/.*user.*.fcgi url script-request-header https://raw.githubusercontent.com/leafTheFish/DeathNote/main//txstockV2.js
 [MITM]
 hostname = wzq.tenpay.com
 */
+const $ = new Env('腾讯自选股V2');
 const jsname = '腾讯自选股V2'
-const $ = new Env(jsname);
 
 const notifyFlag = 1; //0为关闭通知，1为打开通知,默认为1
 let notifyStr = ''
